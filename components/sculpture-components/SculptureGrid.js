@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Row, Typography, Card, Tooltip, Input, Empty } from 'antd'
-// const { Text, Title } = Typography
+const { Text: hey123 } = Typography
 const { Meta } = Card
 const { Search } = Input
 import Link from 'next/link'
@@ -25,51 +25,51 @@ const SculptureCard = ({ idx, info: { name } }) => {
           }
           bordered={true}
         >
-          <Meta title={name} description={<SculptureCardDescription />} />
+          <Meta title={name} description={'hey'} />
         </CardStyled>
       </a>
     </Link>
   )
 }
 
-const SculptureCardDescription = () => {
-  return (
-    <>
-      <Tooltip placement="top" title="Likes">
-        <DescriptionIcon
-          type="heart"
-          theme="twoTone"
-          twoToneColor="#eb2f96"
-          style={{ marginRight: 4 }}
-        />
-      </Tooltip>
+// const SculptureCardDescription = () => {
+//   return (
+//     <>
+//       <Tooltip placement="top" title="Likes">
+//         <DescriptionIcon
+//           type="heart"
+//           theme="twoTone"
+//           twoToneColor="#eb2f96"
+//           style={{ marginRight: 4 }}
+//         />
+//       </Tooltip>
 
-      <Typography.Text type="secondary" style={{ marginRight: 8 }}>
-        15
-      </Typography.Text>
-      <Tooltip placement="top" title="Comments">
-        <DescriptionIcon
-          type="message"
-          theme="twoTone"
-          twoToneColor="rgb(205, 34, 255)"
-          style={{ marginRight: 4 }}
-        />
-      </Tooltip>
-      <Typography.Text type="secondary" style={{ marginRight: 5 }}>
-        20
-      </Typography.Text>
-      <Tooltip placement="top" title="Visits">
-        <DescriptionIcon
-          type="environment"
-          style={{ color: '#F73F3F', marginRight: 3 }}
-        />
-      </Tooltip>
-      <Typography.Text type="secondary" style={{ marginRight: 4 }}>
-        25
-      </Typography.Text>
-    </>
-  )
-}
+//       <Text type="secondary" style={{ marginRight: 8 }}>
+//         15
+//       </Text>
+//       <Tooltip placement="top" title="Comments">
+//         <DescriptionIcon
+//           type="message"
+//           theme="twoTone"
+//           twoToneColor="rgb(205, 34, 255)"
+//           style={{ marginRight: 4 }}
+//         />
+//       </Tooltip>
+//       <Text type="secondary" style={{ marginRight: 5 }}>
+//         20
+//       </Text>
+//       <Tooltip placement="top" title="Visits">
+//         <DescriptionIcon
+//           type="environment"
+//           style={{ color: '#F73F3F', marginRight: 3 }}
+//         />
+//       </Tooltip>
+//       <Text type="secondary" style={{ marginRight: 4 }}>
+//         25
+//       </Text>
+//     </>
+//   )
+// }
 
 // sample data list
 const originalList = new Array(10).fill(0).map((_, idx) => ({
