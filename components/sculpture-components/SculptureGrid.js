@@ -4,7 +4,7 @@ import { Row, Typography, Card, Tooltip, Input, Empty } from 'antd'
 // const { Meta } = Card
 // const { Search } = Input
 import Link from 'next/link'
-import { ColStyled, CardStyled, DescriptionIcon } from './style'
+// import { ColStyled, CardStyled, DescriptionIcon } from './style'
 
 // const SculptureCard = ({ idx, info: { name } }) => {
 //   return (
