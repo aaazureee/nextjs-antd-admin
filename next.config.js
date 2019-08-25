@@ -5,7 +5,6 @@ const FilterWarningsPlugin = require('webpack-filter-warnings-plugin')
 
 module.exports = withLess(
   withCss({
-    target: 'server',
     lessLoaderOptions: {
       javascriptEnabled: true
     },
