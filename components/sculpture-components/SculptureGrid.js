@@ -138,4 +138,4 @@ const SculptureGrid = () => {
   )
 }
 
-export default SculptureGrid
+export default () => 'hello world'
