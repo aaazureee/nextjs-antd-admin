@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
-import { Row, Typography, Card, Tooltip, Input, Empty } from 'antd'
+import { Row, Card, Typography, Tooltip, Input, Empty } from 'antd'
 // const { Text } = Typography
 const { Meta } = Card
 const { Search } = Input
 import Link from 'next/link'
 import { ColStyled, CardStyled, DescriptionIcon } from './style'
+
+const heyDude = Typography.Text
+const heyheyhey = Typography.Paragraph
 
 const SculptureCard = ({ idx, info: { name } }) => {
   return (
