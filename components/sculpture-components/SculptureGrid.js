@@ -8,27 +8,27 @@ import { ColStyled, CardStyled, DescriptionIcon } from './style'
 
 const SculptureCard = ({ idx, info: { name } }) => {
   return (
-    <Link href="https://twitch.tv/">
-      <a style={{ display: 'inline-block' }}>
-        <CardStyled
-          hoverable
-          cover={
-            <img
-              alt="example"
-              src={idx % 2 === 0 ? '/static/img1.jpg' : '/static/img2.jpg'}
-              style={{
-                height: 250,
-                // width: 'auto',
-                objectFit: 'cover'
-              }}
-            />
-          }
-          bordered={true}
-        >
-          <Meta title={name} description={<SculptureCardDescription />} />
-        </CardStyled>
-      </a>
-    </Link>
+    // <Link href="https://twitch.tv/">
+    <a style={{ display: 'inline-block' }}>
+      <CardStyled
+        hoverable
+        cover={
+          <img
+            alt="example"
+            src={idx % 2 === 0 ? '/static/img1.jpg' : '/static/img2.jpg'}
+            style={{
+              height: 250,
+              // width: 'auto',
+              objectFit: 'cover'
+            }}
+          />
+        }
+        bordered={true}
+      >
+        <Meta title={name} description={<SculptureCardDescription />} />
+      </CardStyled>
+    </a>
+    // </Link>
   )
 }
 
