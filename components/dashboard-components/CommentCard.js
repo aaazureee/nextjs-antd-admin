@@ -7,8 +7,6 @@ import {
   BarContainer
 } from './style'
 
-import { useRef, useEffect, useState } from 'react'
-
 import dynamic from 'next/dynamic'
 
 const MiniArea = dynamic(
@@ -22,17 +20,7 @@ export default ({
   DAILY_COMMENTS_CHANGE,
   COMMENT_DATA
 }) => {
-  const ref = useRef(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    // console.log()
-    setTimeout(() => setLoading(false), 150)
-  }, [])
-
-  return loading ? (
-    'Loading...'
-  ) : (
+  return (
     <CardStyled>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <MainIcon
@@ -49,7 +37,6 @@ export default ({
           data={COMMENT_DATA}
           borderColor="rgb(205, 34, 255)"
           color="#feedff"
-          ref={ref}
         />
       </BarContainer>
 

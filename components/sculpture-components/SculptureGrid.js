@@ -9,7 +9,7 @@ import { ColStyled, CardStyled, DescriptionIcon } from './style'
 const SculptureCard = ({ idx, info: { name } }) => {
   return (
     // <Link href="https://twitch.tv/">
-    <a style={{ display: 'inline-block' }}>
+    <a style={{ display: 'inline-block', width: '100%' }}>
       <CardStyled
         hoverable
         cover={
