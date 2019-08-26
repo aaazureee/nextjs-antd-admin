@@ -42,11 +42,11 @@ const SculptureCardDescription = () => {
           twoToneColor="#eb2f96"
           style={{ marginRight: 4 }}
         />
+        <Text type="secondary" style={{ marginRight: 8 }}>
+          15
+        </Text>
       </Tooltip>
 
-      <Text type="secondary" style={{ marginRight: 8 }}>
-        15
-      </Text>
       <Tooltip placement="top" title="Comments">
         <DescriptionIcon
           type="message"
@@ -54,19 +54,20 @@ const SculptureCardDescription = () => {
           twoToneColor="rgb(205, 34, 255)"
           style={{ marginRight: 4 }}
         />
+        <Text type="secondary" style={{ marginRight: 5 }}>
+          20
+        </Text>
       </Tooltip>
-      <Text type="secondary" style={{ marginRight: 5 }}>
-        20
-      </Text>
+
       <Tooltip placement="top" title="Visits">
         <DescriptionIcon
           type="environment"
           style={{ color: '#F73F3F', marginRight: 3 }}
         />
+        <Text type="secondary" style={{ marginRight: 4 }}>
+          25
+        </Text>
       </Tooltip>
-      <Text type="secondary" style={{ marginRight: 4 }}>
-        25
-      </Text>
     </>
   )
 }

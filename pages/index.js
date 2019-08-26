@@ -1,5 +1,6 @@
 import { Row } from 'antd'
 import Layout from '../components/Layout'
+import 'ant-design-pro/lib/Charts/style/index.less'
 import {
   ColStyled,
   UserCard,

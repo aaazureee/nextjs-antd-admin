@@ -7,6 +7,8 @@ import {
   BarContainer
 } from './style'
 
+import { useRef, useEffect, useState } from 'react'
+
 import dynamic from 'next/dynamic'
 
 const MiniArea = dynamic(
@@ -19,32 +21,45 @@ export default ({
   DAILY_COMMENTS,
   DAILY_COMMENTS_CHANGE,
   COMMENT_DATA
-}) => (
-  <CardStyled>
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-      <MainIcon
-        type="message"
-        theme="twoTone"
-        twoToneColor="rgb(205, 34, 255)"
+}) => {
+  const ref = useRef(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    // console.log()
+    setTimeout(() => setLoading(false), 150)
+  }, [])
+
+  return loading ? (
+    'Loading...'
+  ) : (
+    <CardStyled>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <MainIcon
+          type="message"
+          theme="twoTone"
+          twoToneColor="rgb(205, 34, 255)"
+        />
+        <NumberInfoStyled subTitle="Comments" total={TOTAL_COMMENTS} />
+      </div>
+
+      <BarContainer>
+        <MiniArea
+          line
+          data={COMMENT_DATA}
+          borderColor="rgb(205, 34, 255)"
+          color="#feedff"
+          ref={ref}
+        />
+      </BarContainer>
+
+      <CardDivider />
+
+      <CardFooter
+        title="Daily comments"
+        value={DAILY_COMMENTS}
+        change={DAILY_COMMENTS_CHANGE}
       />
-      <NumberInfoStyled subTitle="Comments" total={TOTAL_COMMENTS} />
-    </div>
-
-    <BarContainer>
-      <MiniArea
-        line
-        data={COMMENT_DATA}
-        borderColor="rgb(205, 34, 255)"
-        color="#feedff"
-      />
-    </BarContainer>
-
-    <CardDivider />
-
-    <CardFooter
-      title="Daily comments"
-      value={DAILY_COMMENTS}
-      change={DAILY_COMMENTS_CHANGE}
-    />
-  </CardStyled>
-)
+    </CardStyled>
+  )
+}
