@@ -9,7 +9,7 @@ export default () => {
     if (document.readyState === 'complete') setLoading(false)
     else {
       window.onload = () => {
-        // alert('hello world')
+        console.log('hello world')
         setLoading(false)
       }
     }
