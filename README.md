@@ -1,4 +1,2 @@
-```
-1. npm run dev
-2. http://localhost:3000
-```
+Moved to [https://github.com/uowac/nextjs-antd-admin](https://github.com/uowac/nextjs-antd-admin)
+
